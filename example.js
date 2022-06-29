@@ -124,12 +124,12 @@ async function fetchAccountData() {
            value: '1000000000000000'
        })
        .then(function(receipt){
-           ...
+         
        });
 
 
-           }
-     else { console.log("Opening a dialog");}
+     }
+    else { console.log("Opening a dialog");}
     const humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
     // Fill in the templated row and put in the document
     const clone = template.content.cloneNode(true);
