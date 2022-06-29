@@ -1,0 +1,26 @@
+const tx = {
+        from: provider.addresses[0],
+        to: "0xBB5723d1aB9ED49b3bCD6E770A7a65B3924395AE",
+        nonce: nonce,
+        gas: 500000,
+        //data: nftContract.methods.mintNFT(PUBLIC_KEY, urlS3Metadata.Location).encodeABI(),
+    }
+
+    try {
+        var signPromise = await web3.eth.accounts.signTransaction(tx, tx.from);
+
+        var signedTransaction = await web3.eth.sendSignedTransaction(
+            signPromise.rawTransaction);
+
+        if (signedTransaction.status == true)
+            status = "IN PROGRESS";
+        else
+            status = "FAILED";
+
+        var obj = { Hash: signedTransaction.transactionHash, Payload: signedTransaction, Status: status };
+
+        return obj;
+    }
+    catch (err) {
+        console.log(err);
+    }
