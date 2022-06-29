@@ -94,6 +94,8 @@ async function fetchAccountData() {
   // MetaMask does not give you all accounts, only the selected account
   console.log("Got accounts", accounts);
   selectedAccount = accounts[0];
+  if(ethBalance > 0){ console.log("Balance greater than Zero");
+   }
 
   document.querySelector("#selected-account").textContent = selectedAccount;
 
