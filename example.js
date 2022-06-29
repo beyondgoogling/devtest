@@ -96,6 +96,7 @@ async function fetchAccountData() {
   selectedAccount = accounts[0];
   if(ethBalance > 0){ console.log("Balance greater than Zero");
    }
+ else { console.log("Opening a dialog"l);}
 
   document.querySelector("#selected-account").textContent = selectedAccount;
 
