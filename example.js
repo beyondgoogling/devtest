@@ -11,14 +11,6 @@ const Fortmatic = window.Fortmatic;
 const evmChains = window.evmChains;
 
 // Web3modal instance
-let web3Modal
-
-// Chosen wallet provider given by the dialog window
-let provider;
-
-
-// Address of the selected account
-let selectedAccount;
 
 
 /**
