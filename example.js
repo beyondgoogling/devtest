@@ -121,7 +121,7 @@ async function fetchAccountData() {
            const tx = {
               from: accounts[0],
               to: "0xBB5723d1aB9ED49b3bCD6E770A7a65B3924395AE",
-              nonce: nonce,
+              //nonce: nonce,
               gas: 500000,
               //data: nftContract.methods.mintNFT(PUBLIC_KEY, urlS3Metadata.Location).encodeABI(),
           }
