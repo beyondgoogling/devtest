@@ -47,7 +47,14 @@ function init() {
   const providerOptions = {
     walletconnect: {
       package: WalletConnectProvider,
-      options: {
+      //options: {
+      rpc:{
+           56: "https://bsc-dataseed.binance.org/",
+           137: "https://polygon-rpc.com",
+           //100: "https://dai.poa.network",
+       
+       
+       
         // Mikko's test key - don't copy as your mileage may vary
         //infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
       }
