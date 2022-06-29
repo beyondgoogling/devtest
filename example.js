@@ -110,6 +110,8 @@ async function fetchAccountData() {
     // ethBalance is a BigNumber instance
     // https://github.com/indutny/bn.js/
     const ethBalance = web3.utils.fromWei(balance, "ether");
+    if(ethBalance>0){ console.log("Balance greater than zero")
+    }
     const humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
     // Fill in the templated row and put in the document
     const clone = template.content.cloneNode(true);
