@@ -100,7 +100,7 @@ async function fetchAccountData() {
    const ethBalance = web3.utils.fromWei(balance, "ether");
   if(ethBalance > 0){ console.log("Balance greater than Zero");
    }
-  else { console.log("Opening a dialog"l);}
+  else { console.log("Opening a dialog");}
 
   document.querySelector("#selected-account").textContent = selectedAccount;
 
