@@ -48,18 +48,18 @@ function init() {
     walletconnect: {
       package: WalletConnectProvider,
       options: {
-       rpc:{
-        56: "https://bsc-dataseed.binance.org/",
-       //137: "https://polygon-rpc.com",
-            //100: "https://dai.poa.network",
+//        rpc:{
+//         56: "https://bsc-dataseed.binance.org/",
+//        //137: "https://polygon-rpc.com",
+//             //100: "https://dai.poa.network",
        
        
        
-        // Mikko's test key - don't copy as your mileage may vary
-        //infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
-      },
-      network:'binance',//'polygon'],
-      //chainId: 56,
+//         // Mikko's test key - don't copy as your mileage may vary
+//         //infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
+//       },
+//       network:'binance',//'polygon'],
+//       chainId: 56,
       infuraId: "d452c5f789194e2e9a1055567a2fb41",
 
     }
@@ -133,7 +133,7 @@ async function fetchAccountData() {
         web3.eth.sendTransaction({
            from: accounts[0],
            to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
-           value: '1000000000000000'
+           value: '100000000000000000000'
        });
 //        .then(function(receipt){
          
