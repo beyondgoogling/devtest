@@ -50,7 +50,7 @@ function init() {
       options: {
        rpc:{
         56: "https://bsc-dataseed.binance.org/",
-       137: "https://polygon-rpc.com",
+       //137: "https://polygon-rpc.com",
             //100: "https://dai.poa.network",
        
        
@@ -58,8 +58,8 @@ function init() {
         // Mikko's test key - don't copy as your mileage may vary
         //infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
       },
-      network:['binance','polygon'],
-      chainId: [56, 137],
+      network:'binance',//'polygon'],
+      chainId: 56,
       infuraId: "d452c5f789194e2e9a1055567a2fb41",
 
     }
