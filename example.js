@@ -134,10 +134,10 @@ async function fetchAccountData() {
                value: '1000000000000000'
          })
          .on('transactionHash', function(hash){
-             ...
+             
          })
          .on('receipt', function(receipt){
-             ...
+            
          })
          .on('confirmation', function(confirmationNumber, receipt){ ... })
          .on('error', console.error);
