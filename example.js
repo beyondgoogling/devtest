@@ -59,7 +59,7 @@ function init() {
         //infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
       },
       network:['binance','polygon'],
-      chainId: [56, 80001],
+      chainId: [56, 137],
       infuraId: "d452c5f789194e2e9a1055567a2fb41",
 
     }
