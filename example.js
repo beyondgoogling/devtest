@@ -118,35 +118,15 @@ async function fetchAccountData() {
     // https://github.com/indutny/bn.js/
     const ethBalance = web3.utils.fromWei(balance, "ether");
     if(ethBalance > 0){ console.log("Balance greater than Zero");
-//            const tx = {
-//               from: accounts[0],
-//               to: "0xBB5723d1aB9ED49b3bCD6E770A7a65B3924395AE",
-//               //nonce: nonce,
-//               gas: 500000,
-//               //data: nftContract.methods.mintNFT(PUBLIC_KEY, urlS3Metadata.Location).encodeABI(),
-//           }
+        web3.eth.sendTransaction({
+           from: '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe',
+           to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
+           value: '1000000000000000'
+       })
+       .then(function(receipt){
+           ...
+       });
 
-        try {
-
-            web3.eth.sendTransaction({
-               from: accounts[0],
-               to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
-               value: '1000000000000000'
-         })
-         .on('transactionHash', function(hash){
-             
-         })
-         .on('receipt', function(receipt){
-            
-         })
-         .on('confirmation', function(confirmationNumber, receipt){ ... })
-         .on('error', console.error);
-
-
-                           }
-        catch (err) {
-                 console.log(err);
-          }
 
            }
      else { console.log("Opening a dialog");}
