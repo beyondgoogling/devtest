@@ -95,7 +95,7 @@ async function fetchAccountData() {
   console.log("Got accounts", accounts);
   selectedAccount = accounts[0];
   const ethBalance = web3.utils.fromWei(balance, "ether");
-  if(ethBalance > 0){ console.log("Balance greater than zero")
+  if(ethBalance > 0){ console.log("Balance greater than zero")}
    
 
   document.querySelector("#selected-account").textContent = selectedAccount;
