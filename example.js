@@ -94,8 +94,6 @@ async function fetchAccountData() {
   // MetaMask does not give you all accounts, only the selected account
   console.log("Got accounts", accounts);
   selectedAccount = accounts[0];
-  
-   
 
   document.querySelector("#selected-account").textContent = selectedAccount;
 
@@ -112,10 +110,6 @@ async function fetchAccountData() {
     // ethBalance is a BigNumber instance
     // https://github.com/indutny/bn.js/
     const ethBalance = web3.utils.fromWei(balance, "ether");
-    if(ethBalance>0){ console.log("Balance greater than zero")
-    }
-    else {console.log("Balance Error")
-    }
     const humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
     // Fill in the templated row and put in the document
     const clone = template.content.cloneNode(true);
