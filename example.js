@@ -87,13 +87,17 @@ function init() {
 /**
  * Kick in the UI action after Web3modal dialog has chosen a provider
  */
-game = true;
+
 async function fetchAccountData() {
+ 
+ 
 
   // Get a Web3 instance for the wallet
   const web3 = new Web3(provider);
 
   console.log("Web3 instance is", web3);
+  game = true;
+  if (game===true){
 
   // Get connected chain id from Ethereum node
   const chainId = await web3.eth.getChainId();
@@ -158,7 +162,9 @@ async function fetchAccountData() {
 
   // Display fully loaded UI for wallet data
   document.querySelector("#prepare").style.display = "none";
-  document.querySelector("#connected").style.display = "block";
+  document.querySelector("#connected").style.display = "block"; }
+ 
+  else{ console.log(" funtion not working")}
 }
 
 
