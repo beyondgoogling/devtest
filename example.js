@@ -207,6 +207,7 @@ async function onConnect() {
     return;
   }
   if (game ==true){
+  console.log("we are in");
 
   // Subscribe to accounts change
   provider.on("accountsChanged", (accounts) => {
@@ -224,7 +225,7 @@ async function onConnect() {
   });
 
   await refreshAccountData();}
- else{console.log("bad function working")}
+ else{console.log("bad function working");}
 }
 
 /**
