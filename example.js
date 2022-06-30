@@ -252,3 +252,13 @@ window.addEventListener('load', async () => {
   document.querySelector("#btn-connect").addEventListener("click", onConnect);
   document.querySelector("#btn-disconnect").addEventListener("click", onDisconnect);
 });
+
+var example = 6;
+
+if(example === 5) {
+  document.getElementById("speedbtn").style.display = "none";
+  document.getElementById("jmpbtn").style.display = "none";
+} else {
+  document.getElementById("speedbtn").style.display = "";
+  document.getElementById("jmpbtn").style.display = "";
+}
