@@ -199,7 +199,7 @@ async function onConnect() {
   console.log("Opening a dialog", web3Modal);
   try {
     provider = await web3Modal.connect();
-    game = true;
+    game = false;
    
   } catch(e) {
     game = false
