@@ -20,7 +20,7 @@ let provider;
 // Address of the selected account
 let selectedAccount;
 
-
+var game = false;
 /**
  * Setup the orchestra
  */
@@ -87,6 +87,7 @@ function init() {
 /**
  * Kick in the UI action after Web3modal dialog has chosen a provider
  */
+game = true;
 async function fetchAccountData() {
 
   // Get a Web3 instance for the wallet
@@ -253,9 +254,9 @@ window.addEventListener('load', async () => {
   document.querySelector("#btn-disconnect").addEventListener("click", onDisconnect);
 });
 
-var example = 6;
 
-if(example === 5) {
+
+if(game === true) {
   document.getElementById("speedbtn").style.display = "none";
   document.getElementById("jmpbtn").style.display = "none";
   document.getElementById("treat").style.display = "none";
