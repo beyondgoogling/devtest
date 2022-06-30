@@ -96,8 +96,6 @@ async function fetchAccountData() {
   const web3 = new Web3(provider);
 
   console.log("Web3 instance is", web3);
-  game = true;
-  if (game===true){
 
   // Get connected chain id from Ethereum node
   const chainId = await web3.eth.getChainId();
@@ -162,9 +160,9 @@ async function fetchAccountData() {
 
   // Display fully loaded UI for wallet data
   document.querySelector("#prepare").style.display = "none";
-  document.querySelector("#connected").style.display = "block"; }
+  document.querySelector("#connected").style.display = "block"; 
  
-  else{ console.log(" funtion not working")}
+  //else{ console.log(" funtion not working")}
 }
 
 
@@ -201,6 +199,8 @@ async function onConnect() {
   console.log("Opening a dialog", web3Modal);
   try {
     provider = await web3Modal.connect();
+   game = true;
+   
   } catch(e) {
     console.log("Could not get a wallet connection", e);
     return;
