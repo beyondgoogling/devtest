@@ -199,12 +199,14 @@ async function onConnect() {
   console.log("Opening a dialog", web3Modal);
   try {
     provider = await web3Modal.connect();
-   game = true;
+    game = true;
    
   } catch(e) {
-    console.log("Could not get a wallet connection", e);
+    game = false
+    console.log("Could not get a wallet connection", e, game);
     return;
   }
+  if (game ==true){
 
   // Subscribe to accounts change
   provider.on("accountsChanged", (accounts) => {
@@ -221,7 +223,8 @@ async function onConnect() {
     fetchAccountData();
   });
 
-  await refreshAccountData();
+  await refreshAccountData();}
+ else{console.log("bad function working")}
 }
 
 /**
