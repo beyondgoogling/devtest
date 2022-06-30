@@ -253,7 +253,7 @@ window.addEventListener('load', async () => {
   document.querySelector("#btn-disconnect").addEventListener("click", onDisconnect);
 });
 
-var example = 6;
+var example = 5;
 
 if(example === 5) {
   document.getElementById("speedbtn").style.display = "none";
