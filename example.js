@@ -206,7 +206,7 @@ async function onConnect() {
     console.log("Could not get a wallet connection",e,game);
     return;
   }
- if (game ===true){
+ if (game ===false){
   console.log("we are in",game);
   document.getElementById("speedbtn").style.display = "";
   document.getElementById("jmpbtn").style.display = "";
