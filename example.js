@@ -272,14 +272,3 @@ window.addEventListener('load', async () => {
   document.querySelector("#btn-disconnect").addEventListener("click", onDisconnect);
 });
 
-
-
-if(game === true) {
-  document.getElementById("speedbtn").style.display = "none";
-  document.getElementById("jmpbtn").style.display = "none";
-  document.getElementById("treat").style.display = "none";
-} else {
-  document.getElementById("speedbtn").style.display = "";
-  document.getElementById("jmpbtn").style.display = "";
-  document.getElementById("treat").style.display = "";
-}
