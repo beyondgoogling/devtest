@@ -234,7 +234,7 @@ async function onConnect() {
 //      document.getElementById("treat").style.display = "none";
 
 //   }
-}
+
 
 /**
  * Disconnect wallet button pressed.
