@@ -206,7 +206,7 @@ async function onConnect() {
     console.log("Could not get a wallet connection",e,game);
     return;
   }
-  if (game ==true){
+  if (game ===true){
   console.log("we are in");
 
   // Subscribe to accounts change
