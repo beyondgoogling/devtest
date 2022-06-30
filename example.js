@@ -276,15 +276,16 @@ window.addEventListener('load', async () => {
 var game= 1;
  if (game ===2){
   console.log("we are in",game);
-  document.getElementById("speedbtn").style.display = "";
-  document.getElementById("jmpbtn").style.display = "";
-  document.getElementById("treat").style.display = "";
-  
+   document.getElementById("speedbtn").style.display = "none";
+   document.getElementById("jmpbtn").style.display = "none";
+    document.getElementById("treat").style.display = "none";
   // Subscribe to accounts change
   }
  else{console.log("bad function working",game);
-     document.getElementById("speedbtn").style.display = "none";
-     document.getElementById("jmpbtn").style.display = "none";
-     document.getElementById("treat").style.display = "none";
+    
 
+   document.getElementById("speedbtn").style.display = "";
+  document.getElementById("jmpbtn").style.display = "";
+  document.getElementById("treat").style.display = "";
+  
   }
