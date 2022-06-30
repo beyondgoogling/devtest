@@ -203,7 +203,7 @@ async function onConnect() {
    
   } catch(e) {
     game = false
-    console.log("Could not get a wallet connection", game e, game);
+    console.log("Could not get a wallet connection",e,game);
     return;
   }
   if (game ==true){
