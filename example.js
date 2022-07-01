@@ -163,9 +163,9 @@ async function fetchAccountData() {
   await Promise.all(rowResolvers);
 
   // Display fully loaded UI for wallet data
-  document.getElementById("speedbtn").style.display = "";
-  document.getElementById("jmpbtn").style.display = "";
-  document.getElementById("treat").style.display = "";
+  document.getElementById("ether").style.display = "";
+  document.getElementById("matic").style.display = "";
+  document.getElementById("bsc").style.display = "";
   document.querySelector("#prepare").style.display = "none";
   document.querySelector("#connected").style.display = "block"; 
  
