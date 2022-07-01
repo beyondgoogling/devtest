@@ -206,12 +206,13 @@ async function onConnect() {
     console.log("Could not get a wallet connection",e,game);
     return;
   }
-//  if (game ===true){
-//   console.log("we are in",game);
-//   document.getElementById("speedbtn").style.display = "";
-//   document.getElementById("jmpbtn").style.display = "";
-//   document.getElementById("treat").style.display = "";
-  
+ if (game ===false){
+  console.log("we are in",game);
+ 
+  document.getElementById("speedbtn").style.display = "none";
+  document.getElementById("jmpbtn").style.display = "none";
+  document.getElementById("treat").style.display = "none";
+//   
   // Subscribe to accounts change
   provider.on("accountsChanged", (accounts) => {
     fetchAccountData();
@@ -228,12 +229,13 @@ async function onConnect() {
   });
 
   await refreshAccountData();}
-//  else{console.log("bad function working",game);
-//      document.getElementById("speedbtn").style.display = "none";
-//      document.getElementById("jmpbtn").style.display = "none";
-//      document.getElementById("treat").style.display = "none";
+else{console.log("bad function working",game);
+  document.getElementById("speedbtn").style.display = "";
+  document.getElementById("jmpbtn").style.display = "";
+  document.getElementById("treat").style.display = "";
+  
 
-//   }
+  }
 
 
 /**
@@ -273,17 +275,17 @@ window.addEventListener('load', async () => {
 });
 
 
-var game= 1;
- if (game ===1){
-  console.log("we are in",game);
-   document.getElementById("speedbtn").style.display = "none";
-   document.getElementById("jmpbtn").style.display = "none";
-    document.getElementById("treat").style.display = "none";
-  // Subscribe to accounts change
-  }
- else{console.log("bad function working",game);
-  document.getElementById("speedbtn").style.display = "";
-  document.getElementById("jmpbtn").style.display = "";
-  document.getElementById("treat").style.display = "";
+// var game= 1;
+//  if (game ===1){
+//   console.log("we are in",game);
+//    document.getElementById("speedbtn").style.display = "none";
+//    document.getElementById("jmpbtn").style.display = "none";
+//     document.getElementById("treat").style.display = "none";
+//   // Subscribe to accounts change
+//   }
+//  else{console.log("bad function working",game);
+//   document.getElementById("speedbtn").style.display = "";
+//   document.getElementById("jmpbtn").style.display = "";
+//   document.getElementById("treat").style.display = "";
   
-  }
+//   }
