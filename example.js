@@ -291,17 +291,11 @@ window.addEventListener('load', async () => {
 
 function etherboy ()  {
  window.ethereum.request({
-    method: "wallet_addEthereumChain",
+    method: "wallet_switchEthereumChain",
     params: [{
         chainId: "0x1",
-        rpcUrls: ["https://cloudflare-eth.com/"],
-        chainName: "Ethereum Mainnet",
-        nativeCurrency: {
-            name: "Ethereum",
-            symbol: "ETH",
-            decimals: 18
-        },
-        blockExplorerUrls: ["https://etherscan.com/"]
+        
+      
     }]
 });}
 
