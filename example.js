@@ -326,9 +326,11 @@ function bscboy ()  {
  window.ethereum.request({
     method: "wallet_addEthereumChain",
     params: [{
-        chainId: "0x38",
-        rpcUrls: ["https://bsc-dataseed.binance.org/"],
-        chainName: "Binance Smart Chain",
+        chainId: "0x61",
+        rpcUrls: ["https://data-seed-prebsc-1-s1.binance.org:8545/"],
+         
+         //"https://bsc-dataseed.binance.org/"],
+        chainName: "Binance Smart Chain TESTTNET",
         nativeCurrency: {
             name: "BNB",
             symbol: "BNB",
