@@ -199,13 +199,14 @@ async function onConnect() {
   console.log("Opening a dialog", web3Modal);
   try {
     provider = await web3Modal.connect();
-    game = true;
+    
    
   } catch(e) {
     game = false;
     console.log("Could not get a wallet connection",e,game);
     return;
   }
+ game = true;
  if (game ===true){
   console.log("we are in",game);
   document.getElementById("speedbtn").style.display = "none";
