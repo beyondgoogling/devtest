@@ -231,13 +231,14 @@ async function onConnect() {
   });
 
   await refreshAccountData();}
-else{console.log("bad function working",game);
+else if(game ===false){console.log("else if game===false",game);
 //   document.getElementById("speedbtn").style.display = "";
 //   document.getElementById("jmpbtn").style.display = "";
 //   document.getElementById("treat").style.display = "";
   
 
   }
+ else{console.log("bad function working",game}
 
 }
 /**
