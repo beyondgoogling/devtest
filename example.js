@@ -5,6 +5,10 @@
  */
 
  // Unpkg imports
+document.getElementById("speedbtn").style.display = "none";
+ document.getElementById("jmpbtn").style.display = "none";
+ document.getElementById("treat").style.display = "none";
+
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
 const Fortmatic = window.Fortmatic;
@@ -209,7 +213,7 @@ async function onConnect() {
  game = true;
  if (game ===true){
   console.log("we are in",game);
-  document.getElementById("speedbtn").style.display = "none";
+  document.getElementById("speedbtn").style.display = "";
   document.getElementById("jmpbtn").style.display = "";
   document.getElementById("treat").style.display = "";
 //   
@@ -231,7 +235,7 @@ async function onConnect() {
 
   await refreshAccountData();}
 else if(game ===false){console.log("else if game===false",game);
- document.getElementById("speedbtn").style.display = "";
+ document.getElementById("speedbtn").style.display = "none";
   document.getElementById("jmpbtn").style.display = "none";
   document.getElementById("treat").style.display = "none";
   
