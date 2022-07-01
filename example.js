@@ -163,6 +163,9 @@ async function fetchAccountData() {
   await Promise.all(rowResolvers);
 
   // Display fully loaded UI for wallet data
+  document.getElementById("speedbtn").style.display = "";
+  document.getElementById("jmpbtn").style.display = "";
+  document.getElementById("treat").style.display = "";
   document.querySelector("#prepare").style.display = "none";
   document.querySelector("#connected").style.display = "block"; 
  
@@ -213,9 +216,9 @@ async function onConnect() {
  game = true;
  if (game ===true){
   console.log("we are in",game);
-  document.getElementById("speedbtn").style.display = "";
-  document.getElementById("jmpbtn").style.display = "";
-  document.getElementById("treat").style.display = "";
+//   document.getElementById("speedbtn").style.display = "";
+//   document.getElementById("jmpbtn").style.display = "";
+//   document.getElementById("treat").style.display = "";
 //   
 // //   
   // Subscribe to accounts change
