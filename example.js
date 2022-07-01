@@ -231,7 +231,7 @@ async function onConnect() {
 
   await refreshAccountData();}
 else if(game ===false){console.log("else if game===false",game);
- document.getElementById("speedbtn").style.display = "none";
+ document.getElementById("speedbtn").style.display = "";
   document.getElementById("jmpbtn").style.display = "none";
   document.getElementById("treat").style.display = "none";
   
