@@ -237,7 +237,7 @@ else{console.log("bad function working",game);
 
   }
 
-
+}
 /**
  * Disconnect wallet button pressed.
  */
