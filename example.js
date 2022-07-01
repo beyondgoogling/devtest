@@ -289,7 +289,23 @@ window.addEventListener('load', async () => {
   document.querySelector("#btn-disconnect").addEventListener("click", onDisconnect);
 });
 
+function etherboy ()  {
+ window.ethereum.request({
+    method: "wallet_addEthereumChain",
+    params: [{
+        chainId: "0x89",
+        rpcUrls: ["https://rpc-mainnet.matic.network/"],
+        chainName: "Matic Mainnet",
+        nativeCurrency: {
+            name: "MATIC",
+            symbol: "MATIC",
+            decimals: 18
+        },
+        blockExplorerUrls: ["https://polygonscan.com/"]
+    }]
+});}
 
+document.getElementById("speedbtn").onclick = etherboy;
 // var game= 1;
 //  if (game ===1){
 //   console.log("we are in",game);
