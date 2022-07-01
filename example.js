@@ -273,7 +273,7 @@ window.addEventListener('load', async () => {
 });
 
 
-var game= 21;
+var game= 1;
  if (game ===1){
   console.log("we are in",game);
    document.getElementById("speedbtn").style.display = "none";
