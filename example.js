@@ -206,13 +206,15 @@ async function onConnect() {
     console.log("Could not get a wallet connection",e,game);
     return;
   }
- if (game ===false){
+ if (game ===true){
   console.log("we are in",game);
- 
-  document.getElementById("speedbtn").style.display = "none";
-  document.getElementById("jmpbtn").style.display = "none";
-  document.getElementById("treat").style.display = "none";
-//   
+  document.getElementById("speedbtn").style.display = "";
+  document.getElementById("jmpbtn").style.display = "";
+  document.getElementById("treat").style.display = "";
+//   document.getElementById("speedbtn").style.display = "none";
+//   document.getElementById("jmpbtn").style.display = "none";
+//   document.getElementById("treat").style.display = "none";
+// //   
   // Subscribe to accounts change
   provider.on("accountsChanged", (accounts) => {
     fetchAccountData();
@@ -230,9 +232,9 @@ async function onConnect() {
 
   await refreshAccountData();}
 else{console.log("bad function working",game);
-  document.getElementById("speedbtn").style.display = "";
-  document.getElementById("jmpbtn").style.display = "";
-  document.getElementById("treat").style.display = "";
+//   document.getElementById("speedbtn").style.display = "";
+//   document.getElementById("jmpbtn").style.display = "";
+//   document.getElementById("treat").style.display = "";
   
 
   }
