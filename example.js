@@ -274,7 +274,7 @@ window.addEventListener('load', async () => {
 
 
 var game= 1;
- if (game ===2){
+ if (game ===1){
   console.log("we are in",game);
    document.getElementById("speedbtn").style.display = "none";
    document.getElementById("jmpbtn").style.display = "none";
