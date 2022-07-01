@@ -148,7 +148,7 @@ async function fetchAccountData() {
 
 
      }
-    console.log("Opening a dialog");}
+    console.log("Opening a dialog");
     const humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
     // Fill in the templated row and put in the document
     const clone = template.content.cloneNode(true);
