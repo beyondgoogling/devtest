@@ -282,9 +282,7 @@ var game= 1;
   // Subscribe to accounts change
   }
  else{console.log("bad function working",game);
-    
-
-   document.getElementById("speedbtn").style.display = "";
+  document.getElementById("speedbtn").style.display = "";
   document.getElementById("jmpbtn").style.display = "";
   document.getElementById("treat").style.display = "";
   
