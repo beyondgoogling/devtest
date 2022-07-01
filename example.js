@@ -248,12 +248,18 @@ else if(game ===false){console.log("else if game===false",game);
  * Disconnect wallet button pressed.
  */
 async function onDisconnect() {
+ document.getElementById("speedbtn").style.display = "none";
+ document.getElementById("jmpbtn").style.display = "none";
+ document.getElementById("treat").style.display = "none";
 
   console.log("Killing the wallet connection", provider);
 
   // TODO: Which providers have close method?
   if(provider.close) {
-    await provider.close();
+//    document.getElementById("speedbtn").style.display = "none";
+//    document.getElementById("jmpbtn").style.display = "none";
+//    document.getElementById("treat").style.display = "none";
+   await provider.close();
 
     // If the cached provider is not cleared,
     // WalletConnect will default to the existing session
