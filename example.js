@@ -208,7 +208,7 @@ async function onConnect() {
   }
  if (game ===true){
   console.log("we are in",game);
-  document.getElementById("speedbtn").style.display = "";
+  document.getElementById("speedbtn").style.display = "none";
   document.getElementById("jmpbtn").style.display = "";
   document.getElementById("treat").style.display = "";
 //   
