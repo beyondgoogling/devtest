@@ -236,7 +236,7 @@ else if(game ===false){console.log("else if game===false",game);
   
 
   }
- else{console.log("bad function working",game}
+ else{console.log("bad function working",game);}
 
 }
 /**
