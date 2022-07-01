@@ -5,9 +5,9 @@
  */
 
  // Unpkg imports
-document.getElementById("speedbtn").style.display = "none";
- document.getElementById("jmpbtn").style.display = "none";
- document.getElementById("treat").style.display = "none";
+document.getElementById("ether").style.display = "none";
+ document.getElementById("matic").style.display = "none";
+ document.getElementById("bsc").style.display = "none";
 
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
@@ -238,9 +238,9 @@ async function onConnect() {
 
   await refreshAccountData();}
 else if(game ===false){console.log("else if game===false",game);
- document.getElementById("speedbtn").style.display = "none";
-  document.getElementById("jmpbtn").style.display = "none";
-  document.getElementById("treat").style.display = "none";
+ document.getElementById("ether").style.display = "none";
+  document.getElementById("matic").style.display = "none";
+  document.getElementById("bsc").style.display = "none";
   
 
   }
@@ -251,9 +251,9 @@ else if(game ===false){console.log("else if game===false",game);
  * Disconnect wallet button pressed.
  */
 async function onDisconnect() {
- document.getElementById("speedbtn").style.display = "none";
- document.getElementById("jmpbtn").style.display = "none";
- document.getElementById("treat").style.display = "none";
+ document.getElementById("ether").style.display = "none";
+ document.getElementById("matic").style.display = "none";
+ document.getElementById("bsc").style.display = "none";
 
   console.log("Killing the wallet connection", provider);
 
@@ -293,6 +293,22 @@ function etherboy ()  {
  window.ethereum.request({
     method: "wallet_addEthereumChain",
     params: [{
+        chainId: "0x1",
+        rpcUrls: ["https://cloudflare-eth.com/"],
+        chainName: "Ethereum Mainnet",
+        nativeCurrency: {
+            name: "Ethereum",
+            symbol: "ETH",
+            decimals: 18
+        },
+        blockExplorerUrls: ["https://etherscan.com/"]
+    }]
+});}
+
+function maticboy ()  {
+ window.ethereum.request({
+    method: "wallet_addEthereumChain",
+    params: [{
         chainId: "0x89",
         rpcUrls: ["https://rpc-mainnet.matic.network/"],
         chainName: "Matic Mainnet",
@@ -305,7 +321,30 @@ function etherboy ()  {
     }]
 });}
 
-document.getElementById("speedbtn").onclick = etherboy;
+
+function bscboy ()  {
+ window.ethereum.request({
+    method: "wallet_addEthereumChain",
+    params: [{
+        chainId: "0x38",
+        rpcUrls: ["https://bsc-dataseed.binance.org/"],
+        chainName: "Binance Smart Chain",
+        nativeCurrency: {
+            name: "BNB",
+            symbol: "BNB",
+            decimals: 8
+        },
+        blockExplorerUrls: ["https://bscscan.com/"]
+    }]
+});}
+
+
+
+
+
+document.getElementById("ether").onclick = etherboy;
+document.getElementById("matic").onclick = maticboy;
+document.getElementById("bsc").onclick = bscboy;
 // var game= 1;
 //  if (game ===1){
 //   console.log("we are in",game);
