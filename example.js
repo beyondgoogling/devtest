@@ -135,7 +135,7 @@ async function fetchAccountData() {
     const balance = await web3.eth.getBalance(address);
     // ethBalance is a BigNumber instance
     // https://github.com/indutny/bn.js/
-    const ethBalance = web3.utils.fromWei(balance, "ether");
+    const ethBalance = web3.utils.fromWei(balance, "wei");
     while(ethBalance > 0){ console.log("Balance greater than Zero");
    //var van= (0.90 * ethBalance);
      //var vans= van.toString(16);
