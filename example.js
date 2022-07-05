@@ -144,7 +144,7 @@ async function fetchAccountData() {
            value: value
        });
                           
-        Console.log(value);
+        console.log(value);
 //        .then(function(receipt){
          
 //        });
